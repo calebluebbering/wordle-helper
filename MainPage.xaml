@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="WH.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WH"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#343434">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="253*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="TitleText" Text="Wordle Helper" FontSize="70" Foreground="White" Margin="10,0,10,364" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Segoe Script" Grid.RowSpan="2"/>
+        <TextBlock x:Name="SubText" Text="by caleb luebbering" FontSize="18" Foreground="#FAF9F6" Margin="10,92,10,272" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Segoe Script" Grid.RowSpan="2"/>
+        <Button Content="Find Possibilities" FontFamily="Segoe Script" FontSize="25" Foreground="White" Margin="802,187,0,0" VerticalAlignment="Top" Height="65" Width="252" Click="FindButton_Click" BorderBrush="White" Grid.RowSpan="2"/>
+        <Button Name="ResetButton" Content="Reset" FontFamily="Segoe Script" FontSize="25" Foreground="White" Margin="889,60,0,0" Click="ResetButton_Click" VerticalAlignment="Top" Grid.Row="1" BorderBrush="White"/>
+
+        <TextBox Text="" Name="GreenBox1" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontFamily ="Arial" FontSize ="60" MaxLength="1" HorizontalAlignment="Left" Margin="113,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="80" TextChanged="GreenBox1_TextChanged" TextAlignment="Center"
+                 CharacterCasing="Upper" GettingFocus="GreenBox1_GettingFocus"/>
+        <TextBox Text="" Name="GreenBox2" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontFamily ="Arial" FontSize ="60" MaxLength="1" HorizontalAlignment="Left" Margin="209,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="80" TextChanged="GreenBox2_TextChanged" TextAlignment="Center"
+                 CharacterCasing="Upper" GettingFocus="GreenBox2_GettingFocus"/>
+        <TextBox Text="" Name="GreenBox3" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontFamily ="Arial" FontSize ="60" MaxLength="1" HorizontalAlignment="Left" Margin="305,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="80" TextChanged="GreenBox3_TextChanged" TextAlignment="Center"
+                 CharacterCasing="Upper" GettingFocus="GreenBox3_GettingFocus"/>
+        <TextBox Text="" Name="GreenBox4" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontFamily ="Arial" FontSize ="60" MaxLength="1" HorizontalAlignment="Left" Margin="401,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="80" TextChanged="GreenBox4_TextChanged" TextAlignment="Center"
+                 CharacterCasing="Upper" GettingFocus="GreenBox4_GettingFocus"/>
+        <TextBox Text="" Name="GreenBox5" Foreground="White" Background="Transparent" BorderBrush="Transparent" FontFamily ="Arial" FontSize ="60" MaxLength="1" HorizontalAlignment="Left" Margin="497,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="74" Width="80" TextChanged="GreenBox5_TextChanged" TextAlignment="Center"
+                 CharacterCasing="Upper" GettingFocus="GreenBox5_GettingFocus"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="124,5,0,0" Fill="DarkGreen" Stroke="Transparent" VerticalAlignment="Top" Width="58" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="220,5,0,0" Fill="DarkGreen" Stroke="Transparent" VerticalAlignment="Top" Width="58" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="316,5,0,0" Fill="DarkGreen" Stroke="Transparent" VerticalAlignment="Top" Width="58" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="412,5,0,0" Fill="DarkGreen" Stroke="Transparent" VerticalAlignment="Top" Width="58" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="508,5,0,0" Fill="DarkGreen" Stroke="Transparent" VerticalAlignment="Top" Width="58" Grid.Row="1"/>
+
+        <TextBox Name="YellowTextBox" Text="Enter Yellow Letters:" FontSize="25" Foreground="#343434" Background="LightGoldenrodYellow" BorderBrush="Black"
+                 MaxLength="30" TextChanged="YellowTextBox_TextChanged" CharacterCasing="Upper"  Margin="113,18,0,0" Grid.Row="1" TextWrapping="Wrap"
+                 HorizontalAlignment="Left" Height="44" Width="460" VerticalAlignment="Top" GettingFocus="YellowTextBox_GettingFocus"/>
+        <TextBox Name="GrayTextBox" Text="Enter Gray Letters:" FontSize="25" Foreground="#343434" Background="LightGray" BorderBrush="Black"
+                 MaxLength="30" TextChanged="GrayTextBox_TextChanged" CharacterCasing="Upper"  Margin="113,98,0,0" Grid.Row="1" TextWrapping="Wrap"
+                 HorizontalAlignment="Left" Height="44" Width="460" VerticalAlignment="Top" GettingFocus="GrayTextBox_GettingFocus"/>
+
+        <TextBlock Name="ErrorMessageTextBlock" HorizontalAlignment="Left" Margin="167,68,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"
+                   Foreground="DarkRed" Text="Invalid input (numbers, symbols, and spaces not allowed)" Visibility="Collapsed"/>
+
+
+        <Rectangle HorizontalAlignment="Center" Height="4" Margin="0,249,0,0" Fill="Black" Stroke="Transparent" VerticalAlignment="Top" Width="1216" Grid.Row="1"/>
+        <TextBlock Name="AnswersTextBlock" HorizontalAlignment="Left" Margin="37,260,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"
+                   Text="Possible Answers:" Foreground="White" FontSize="27" FontFamily="Aegean Sea" Width="1211" />
+
+
+    </Grid>
+</Page>
