@@ -1,8 +1,7 @@
 # wordle-helper
 UWP App to solve Wordle
 
-Demo:
-![Homepage](./wordlesolver.jpeg)
+![Demo](./wordlesolver.jpeg)
 
 
 MainPage.xaml - GUI
